@@ -2,7 +2,7 @@ export function TwitterIcon() {
 	return (
 		<svg
 			fill="currentColor"
-			stroke-width="0"
+			strokeWidth="0"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 1024 1024"
 			width="32"
