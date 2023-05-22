@@ -1,7 +1,5 @@
-import ThemeSwitcher from '~/components/theme-switcher'
 import './globals.css'
 import { Varta } from 'next/font/google'
-import Link from 'next/link'
 
 const varta = Varta({ subsets: ['latin'], weight: '400' })
 
@@ -17,7 +15,25 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="scroll-smooth">
-			<body className={`${varta.className} bg-[#0f0f0f] text-[#dee2e6] `}>
+			<body className=" bg-[#0f0f0f] text-[#fdfdfd]">
+				<header
+					className={`${varta.className} p-8  mx-auto max-w-6xl z-0 sticky top-0 bg-[#0f0f0f]`}
+				>
+					<nav className="container flex flex-row items-center justify-between ">
+						<a
+							href="#"
+							className="text-2xl duration-100 ease-in-out hover:opacity-60"
+						>
+							GM
+						</a>
+						<a
+							href="#projects"
+							className="text-2xl duration-100 ease-in-out hover:opacity-60"
+						>
+							Projects
+						</a>
+					</nav>
+				</header>
 				{children}
 			</body>
 		</html>
