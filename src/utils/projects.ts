@@ -43,4 +43,8 @@ export const getProjects = (): Project[] => [
 		title: 'Moden',
 		link: 'https://noxy-moden.netlify.app/',
 	},
+	{ title: 'Noxy recommendations', link: 'https://noxy-recommen' },
+	{ title: 'Noxy feriados', link: 'https://noxy-feriados.vercel.app/' },
+	{ title: 'Noxy chat', link: 'https://noxy-chat.netlify.app/' },
+	{ title: 'Noxy secrets', link: 'https://noxy-secrets.vercel.app/' },
 ]
