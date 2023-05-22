@@ -1,4 +1,4 @@
-type Stack = 'React' | 'Vue' | 'Svelte' | 'SolidJS'
+type Stack = 'React' | 'Vue' | 'Svelte' | 'SolidJS' | 'Preact'
 export type Project = {
 	title: string
 	link: string
@@ -89,6 +89,18 @@ export const getProjects = (): Project[] => [
 		title: 'Noxy secrets',
 		link: 'https://noxy-secrets.vercel.app/',
 		description: 'Web-app, where you can save your env secrets.',
-		stack: 'React',
+		stack: 'Svelte',
+	},
+	{
+		title: 'Noxy solix',
+		description: 'Web app where you can define your shopping list',
+		link: 'https://noxy-solix.netlify.app/',
+		stack: 'SolidJS',
+	},
+	{
+		title: 'Noxy cronometre',
+		description: 'Web app where you define a task with its remaining time.',
+		link: 'https://noxy-cronometre.netlify.app/',
+		stack: 'Preact',
 	},
 ]
