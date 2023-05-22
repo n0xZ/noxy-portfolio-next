@@ -1,116 +1,133 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
+import { Nunito } from 'next/font/google'
+import { GithubIcon } from '~/components/icons/github'
+import { GmailIcon } from '~/components/icons/gmail'
+import LinkedinIcon from '~/components/icons/linkedin'
+import { TwitterIcon } from '~/components/icons/twitter'
+import ProjectList from '~/components/project/list'
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from '~/components/ui/tooltip'
+import { getProjects } from '~/utils/projects'
+const nunito = Nunito({ weight: '300', subsets: ['latin'] })
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	const projects = getProjects()
+	return (
+		<main
+			className={`${nunito.className} container  max-w-5xl  h-full  mx-auto  xl:text-xl lg:text-lg md:text-md     antialised xl:mt-0 mt-4`}
+		>
+			<section
+				className="flex flex-col self-center justify-center w-full h-screen space-y-2 leading-loose border-b-2 border-[#4a4a4a]"
+				id="#"
+			>
+				<h2 className={` mb-6 text-3xl font-bold`}>Welcome 👋🏻</h2>
+				<p className="text-secondary">
+					I&apos;m Gonzalo. Software developer based in Argentina. I&apos;ve been
+					studying programming since I was at high school, starting from C++, C# to
+					Java.
+				</p>
+				<p>
+					I&apos;m a very curious person, that tries to stay up to date with new
+					technologies related to Front-end, backend, in order to build a skillset to
+					solve issues.
+				</p>
+				<p className="text-muted">
+					Some of the technologies that i&apos;ve been implementing with are React,
+					Vue, SolidJS, Typescript and NextJS with Prisma, Drizzle ORM, PostgreSQL.
+				</p>
+				<p className="mb-12 text-muted">
+					Fun fact: I&apos;m a big World of Warcraft fan since Burning Crusade
+					expansion. My favourite class was rogue.
+				</p>
+				<article className="flex flex-col items-center justify-around w-full h-40 gap-3 font-medium xl:flex-row">
+					<a href="mailto:molinagonzalo33@gmail.com" className="underline">
+						Contact me
+					</a>
+					<a
+						href="https://drive.google.com/file/d/1DTFIV4rhpbJ6QXbBrNd6JsitGwtR-U-7/view?usp=share_link"
+						className="w-64 p-3 text-center rounded-md bg-[#fdfdfd]  text-[#0f0f0f] hover:opacity-70 duration-100 ease-in-out"
+					>
+						View resume
+					</a>
+				</article>
+			</section>
+			<section
+				className="flex flex-col justify-center h-full min-h-screen"
+				id="projects"
+			>
+				<h3 className="mt-24 mb-6 text-3xl font-bold">Projects</h3>
+				<ProjectList projects={projects} />
+			</section>
+			<footer className="flex flex-row items-center justify-between p-8 border-t-2 border-[#1b1b1b] mt-6">
+				<TooltipProvider>
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<a
+								aria-label="Github profile"
+								className="w-10 p-0 rounded-full hover:opacity-70 "
+								href="https://github.com/n0xZ"
+								target="_blank"
+								rel="noopener"
+							>
+								<GithubIcon />
+							</a>
+						</TooltipTrigger>
+						<TooltipContent className="bg-[#1b1b1b] border-2 border-[#1b1b1b]">
+							<p className="text-white">Github profile</p>
+						</TooltipContent>
+					</Tooltip>
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<a
+								aria-label="Twitter profile"
+								href="https://twitter.com/undefin0x"
+								target="_blank"
+								rel="noopener"
+								className="w-10 p-0 rounded-full hover:opacity-70"
+							>
+								<TwitterIcon />
+							</a>
+						</TooltipTrigger>
+						<TooltipContent className="bg-[#1b1b1b] border-2 border-[#1b1b1b]">
+							<p className="text-white">Twitter profile</p>
+						</TooltipContent>
+					</Tooltip>
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<a
+								aria-label="LinkedIn profile"
+								href="https://www.linkedin.com/in/gonzalo-molina-153918217/"
+								target="_blank"
+								rel="noopener"
+								className="w-10 p-0 text-white rounded-full hover:opacity-70"
+							>
+								<LinkedinIcon />
+							</a>
+						</TooltipTrigger>
+						<TooltipContent className="bg-[#1b1b1b] border-2 border-[#1b1b1b]">
+							<p className="text-white">LinkedIn profile</p>
+						</TooltipContent>
+					</Tooltip>
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<a
+								aria-label="My Gmail"
+								href="mailto:molinagonzalo33@gmail.com"
+								target="_blank"
+								rel="noopener"
+								className="w-10 p-0 text-white rounded-full hover:opacity-70"
+							>
+								<GmailIcon />
+							</a>
+						</TooltipTrigger>
+						<TooltipContent className="bg-[#1b1b1b] border-2 border-[#1b1b1b]">
+							<p className="text-white">My Gmail</p>
+						</TooltipContent>
+					</Tooltip>
+				</TooltipProvider>
+			</footer>
+		</main>
+	)
 }
