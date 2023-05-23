@@ -40,7 +40,7 @@ export function ProjectItem(props: Props) {
 				)
 				.otherwise(() => null)}
 			<div className="flex flex-col items-center justify-center w-8/12 gap-2 text-center">
-				<h4 className="font-bold text-center">{props.item.title}</h4>
+				<h3 className="font-bold text-center">{props.item.title}</h3>
 				<p className="text-ellipsis text-[#d8dcdf] text-center">
 					{props.item.description}
 				</p>
