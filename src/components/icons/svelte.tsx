@@ -7,7 +7,7 @@ export function SvelteIcon() {
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
-			className="w-10 h-10 text-orange-400 duration-100 ease-in-out hoSver:opacity-70"
+			className="w-10 h-10 text-orange-400 duration-100 ease-in-out hover:opacity-70"
 		>
 			<path
 				fill="currentColor"

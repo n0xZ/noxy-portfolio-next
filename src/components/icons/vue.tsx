@@ -7,7 +7,7 @@ export function VueIcon() {
 			width="32"
 			height="32"
 			viewBox="0 0 32 32"
-			className="w-10 h-10 duration-100 ease-in-out text-emerald-400 hoSver:opacity-70"
+			className="w-10 h-10 duration-100 ease-in-out text-emerald-400 hover:opacity-70"
 		>
 			<path
 				fill="currentColor"

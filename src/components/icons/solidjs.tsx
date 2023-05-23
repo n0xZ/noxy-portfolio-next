@@ -7,7 +7,7 @@ export function SolidjsIcon() {
 			width="256"
 			height="239"
 			viewBox="256 239 256 239"
-			className="w-10 h-10 duration-100 ease-in-out hoSver:opacity-70"
+			className="w-10 h-10 duration-100 ease-in-out hover:opacity-70"
 		>
 			<defs>
 				<linearGradient
