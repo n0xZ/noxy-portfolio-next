@@ -9,13 +9,35 @@ type Props = {
 	item: Project
 }
 export function ProjectItem(props: Props) {
+	const HoverCardColor = match(props.item.stack)
+		.when(
+			(v) => v === 'React',
+			() => 'hover:bg-sky-600/50'
+		)
+		.when(
+			(v) => v === 'Vue',
+			() => 'hover:bg-emerald-400/50'
+		)
+		.when(
+			(v) => v === 'Preact',
+			() => 'hover:bg-violet-600/50'
+		)
+		.when(
+			(v) => v === 'SolidJS',
+			() => 'hover:bg-sky-400/50'
+		)
+		.when(
+			(v) => v === 'Svelte',
+			() => 'hover:bg-orange-400/50'
+		)
+		.otherwise(() => null)
 	return (
 		<a
 			href={props.item.link}
 			target="_blank"
 			rel="noreferrer"
 			key={props.item.link}
-			className="h-36 w-full text-[#dde1e3] rounded-md hover:bg-[#181818]/50   duration-100 ease-in-out flex flex-row justify-around items-center p-1"
+			className={`h-36 w-full text-[#dde1e3] rounded-md ${HoverCardColor}   duration-100 ease-in-out flex flex-row justify-around items-center p-`}
 		>
 			{match(props.item.stack)
 				.when(
