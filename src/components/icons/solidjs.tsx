@@ -19,9 +19,9 @@ export function SolidjsIcon() {
 					gradientTransform="translate(249.56 233.12) scale(1.61006)"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset=".1" stop-color="#76b3e1" />
-					<stop offset=".3" stop-color="#dcf2fd" />
-					<stop offset="1" stop-color="#76b3e1" />
+					<stop offset=".1" stopColor="#76b3e1" />
+					<stop offset=".3" stopColor="#dcf2fd" />
+					<stop offset="1" stopColor="#76b3e1" />
 				</linearGradient>
 				<linearGradient
 					id="logosSolidjsIcon1"
@@ -32,9 +32,9 @@ export function SolidjsIcon() {
 					gradientTransform="translate(249.56 233.12) scale(1.61006)"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0" stop-color="#76b3e1" />
-					<stop offset=".5" stop-color="#4377bb" />
-					<stop offset="1" stop-color="#1f3b77" />
+					<stop offset="0" stopColor="#76b3e1" />
+					<stop offset=".5" stopColor="#4377bb" />
+					<stop offset="1" stopColor="#1f3b77" />
 				</linearGradient>
 				<linearGradient
 					id="logosSolidjsIcon2"
@@ -45,9 +45,9 @@ export function SolidjsIcon() {
 					gradientTransform="translate(249.56 233.12) scale(1.61006)"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0" stop-color="#315aa9" />
-					<stop offset=".5" stop-color="#518ac8" />
-					<stop offset="1" stop-color="#315aa9" />
+					<stop offset="0" stopColor="#315aa9" />
+					<stop offset=".5" stopColor="#518ac8" />
+					<stop offset="1" stopColor="#315aa9" />
 				</linearGradient>
 				<linearGradient
 					id="logosSolidjsIcon3"
@@ -58,9 +58,9 @@ export function SolidjsIcon() {
 					gradientTransform="translate(249.56 233.12) scale(1.61006)"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0" stop-color="#4377bb" />
-					<stop offset=".5" stop-color="#1a336b" />
-					<stop offset="1" stop-color="#1a336b" />
+					<stop offset="0" stopColor="#4377bb" />
+					<stop offset=".5" stopColor="#1a336b" />
+					<stop offset="1" stopColor="#1a336b" />
 				</linearGradient>
 			</defs>
 			<path
