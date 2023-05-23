@@ -22,7 +22,9 @@ export default function Home() {
 				className="flex flex-col self-center justify-center w-full h-screen space-y-2 leading-loose border-b-2 border-[#4a4a4a]"
 				id="#"
 			>
-				<h2 className={` mb-6 text-3xl font-bold`}>Welcome 👋🏻</h2>
+				<h1 className={` mb-6 text-3xl font-bold xl:mt-0 lg:mt-0   md:mt-12 sm:mt-6`}>
+					Welcome 👋🏻
+				</h1>
 				<p className="text-secondary">
 					I&apos;m Gonzalo. Software developer based in Argentina. I&apos;ve been
 					studying programming since I was at high school, starting from C++, C# to
