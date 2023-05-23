@@ -4,6 +4,7 @@ import { ReactIcon } from '../icons/react'
 import { VueIcon } from '../icons/vue'
 import { SvelteIcon } from '../icons/svelte'
 import { SolidjsIcon } from '../icons/solidjs'
+import { PreactIcon } from '../icons/preact'
 type Props = {
 	item: Project
 }
@@ -32,6 +33,10 @@ export function ProjectItem(props: Props) {
 				.when(
 					(v) => v === 'SolidJS',
 					() => <SolidjsIcon />
+				)
+				.when(
+					(v) => v === 'Preact',
+					() => <PreactIcon />
 				)
 				.otherwise(() => null)}
 			<div className="flex flex-col items-center justify-center w-8/12 gap-2 text-center">
