@@ -19,7 +19,7 @@ export default function Home() {
 			className={`${nunito.className} container  max-w-5xl  h-full  mx-auto  xl:text-xl lg:text-lg md:text-md     antialised xl:mt-0 mt-4`}
 		>
 			<section
-				className="flex flex-col self-center justify-center w-full h-screen space-y-2 leading-loose border-b-2 border-[#4a4a4a]"
+				className="flex flex-col self-center justify-center w-full h-full min-h-screen space-y-2 leading-loose "
 				id="#"
 			>
 				<h1 className={` mb-6 text-3xl font-bold xl:mt-0 lg:mt-0   md:mt-12 sm:mt-6`}>
