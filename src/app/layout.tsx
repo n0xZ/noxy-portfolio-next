@@ -1,8 +1,8 @@
 import './globals.css'
-import { Varta } from 'next/font/google'
+import { Nunito, Varta } from 'next/font/google'
 
 const varta = Varta({ subsets: ['latin'], weight: '400' })
-
+const nunito = Nunito({ weight: '300', subsets: ['latin'] })
 export const metadata = {
 	title: 'Gonzalo Molina',
 	description: 'Software developer.',
@@ -34,7 +34,11 @@ export default function RootLayout({
 						</a>
 					</nav>
 				</header>
-				{children}
+				<main
+					className={`${nunito.className} container  max-w-5xl  h-full  mx-auto  xl:text-xl lg:text-lg md:text-md     antialised xl:mt-0 mt-4`}
+				>
+					{children}
+				</main>
 			</body>
 		</html>
 	)
