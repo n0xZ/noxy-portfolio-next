@@ -22,13 +22,13 @@ export default function RootLayout({
 					<nav className="container flex flex-row items-center justify-between ">
 						<a
 							href="#"
-							className="text-2xl duration-100 ease-in-out hover:opacity-60"
+							className="text-2xl duration-100 ease-in-out hover:underline"
 						>
 							GM
 						</a>
 						<a
 							href="#projects"
-							className="text-2xl duration-100 ease-in-out hover:opacity-60"
+							className="text-2xl duration-100 ease-in-out hover:underline"
 						>
 							Projects
 						</a>
