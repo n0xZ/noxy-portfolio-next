@@ -15,15 +15,34 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="scroll-smooth">
+			<head>
+				<meta name="title" content="Gonzalo Molina" />
+				<meta name="description" content="Software developer based in Argentina." />
+
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="https://n0xz.vercel.app/" />
+				<meta property="og:title" content="Gonzalo Molina" />
+				<meta
+					property="og:description"
+					content="Software developer based in Argentina."
+				/>
+				<meta property="og:image" content="~/public/preview-portfolio.png" />
+
+				<meta property="twitter:card" content="~/public/preview-portfolio.png" />
+				<meta property="twitter:url" content="https://n0xz.vercel.app/" />
+				<meta property="twitter:title" content="Gonzalo Molina" />
+				<meta
+					property="twitter:description"
+					content="Software developer based in Argentina."
+				/>
+				<meta property="twitter:image" content="~/public/preview-portfolio.png"></meta>
+			</head>
 			<body className=" bg-[#0f0f0f] text-[#fdfdfd]">
 				<header
-					className={`${varta.className} p-8  mx-auto max-w-6xl z-0 sticky top-0 bg-[#0f0f0f]`}
+					className={`${varta.className} p-8 sticky top-0 z-0   bg-[#181818]/30`}
 				>
-					<nav className="container flex flex-row items-center justify-between ">
-						<a
-							href="#"
-							className="text-2xl duration-100 ease-in-out hover:underline"
-						>
+					<nav className="container flex flex-row items-center justify-between max-w-6xl mx-auto">
+						<a href="#" className="text-2xl duration-100 ease-in-out hover:underline">
 							GM
 						</a>
 						<a
