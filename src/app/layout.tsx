@@ -27,11 +27,18 @@ export default function RootLayout({
 					content="Software developer based in Argentina."
 				/>
 
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:url" content="https://n0xz.vercel.app/"/>
-<meta property="twitter:title" content="Gonzalo Molina"/>
-<meta property="twitter:description" content="Software developer based in Argentina."/>
-<meta property="twitter:image" content="https://noxy-portfolio-gvpafesfb-n0xz.vercel.app/opengraph-image.png?c6108438d3c72f68"/>
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta property="twitter:url" content="https://n0xz.vercel.app/" />
+				<meta property="twitter:title" content="Gonzalo Molina" />
+				<meta
+					property="twitter:description"
+					content="Software developer based in Argentina."
+				/>
+				<meta
+					property="twitter:image"
+					content="https://noxy-portfolio-gvpafesfb-n0xz.vercel.app/opengraph-image.png?c6108438d3c72f68"
+				/>
+			</head>
 			<body className=" bg-[#0f0f0f] text-[#fdfdfd]">
 				<header
 					className={`${varta.className} p-8 sticky top-0 z-0   bg-[#181818]/30`}
