@@ -26,16 +26,13 @@ export default function RootLayout({
 					property="og:description"
 					content="Software developer based in Argentina."
 				/>
-				<meta property="og:image" content="~/public/preview-portfolio.png" />
 
-				<meta property="twitter:card" content="~/public/preview-portfolio.png" />
 				<meta property="twitter:url" content="https://n0xz.vercel.app/" />
 				<meta property="twitter:title" content="Gonzalo Molina" />
 				<meta
 					property="twitter:description"
 					content="Software developer based in Argentina."
 				/>
-				<meta property="twitter:image" content="~/public/preview-portfolio.png"></meta>
 			</head>
 			<body className=" bg-[#0f0f0f] text-[#fdfdfd]">
 				<header
