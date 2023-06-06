@@ -40,9 +40,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body className=" bg-[#0f0f0f] text-[#fdfdfd]">
-				<header
-					className={`${varta.className} p-8 sticky top-0 z-0   bg-[#181818]/30`}
-				>
+				<header className={`${varta.className} p-8 sticky `}>
 					<nav className="container flex flex-row items-center justify-between max-w-6xl mx-auto">
 						<a href="#" className="text-2xl duration-100 ease-in-out hover:underline">
 							GM
@@ -56,7 +54,7 @@ export default function RootLayout({
 					</nav>
 				</header>
 				<main
-					className={`${nunito.className} container  max-w-5xl  h-full  mx-auto  xl:text-xl lg:text-lg md:text-md     antialised xl:mt-0 mt-4`}
+					className={`${nunito.className} container  max-w-5xl  h-full  mx-auto       antialised xl:mt-0 mt-4`}
 				>
 					{children}
 				</main>

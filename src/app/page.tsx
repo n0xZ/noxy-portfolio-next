@@ -1,5 +1,6 @@
 import { MediaLinks } from '~/components/media/links'
 import ProjectList from '~/components/project/list'
+import Paragraph from '~/components/ui/paragraph'
 
 import { getProjects } from '~/utils/projects'
 export const metadata = {
@@ -12,33 +13,36 @@ export default function Home() {
 	return (
 		<>
 			<section
-				className="flex flex-col self-center justify-center w-full h-full min-h-screen space-y-2 leading-loose text-[#d8dcdf] "
+				className="flex flex-col self-center justify-center w-full h-full min-h-screen space-y-2 leading-loose "
 				id="#"
 			>
 				<h1
-					className={` mb-6 text-3xl font-bold xl:mt-0 lg:mt-0   md:mt-12 sm:mt-6`}
+					className={`scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl`}
 				>
 					Welcome 👋🏻
 				</h1>
-				<p className="text-secondary">
-					I&apos;m Gonzalo. Software developer based in Argentina. I&apos;ve been
-					studying programming since I was at high school, starting from C++, C# to
-					Java.
-				</p>
-				<p>
-					I&apos;m a very curious person, that tries to stay up to date with new
-					technologies related to Front-end, backend, in order to build a skillset to
-					solve issues.
-				</p>
-				<p>
-					Some of the technologies that i&apos;ve been implementing with are React,
-					Vue, SolidJS, Typescript and NextJS with Prisma, Drizzle ORM, PostgreSQL.
-				</p>
-				<p>
-					Fun fact: I&apos;m a big World of Warcraft fan since Burning Crusade
-					expansion. My favourite class was rogue.
-				</p>
-				<article className="flex flex-row items-center justify-center w-full font-medium gap-7 h-36 ">
+				<article className="w-full opacity-80">
+					{' '}
+					<Paragraph>
+						I&apos;m Gonzalo. Software developer based in Argentina. I&apos;ve been
+						studying programming since I was at high school, starting from C++, C# to
+						Java.
+					</Paragraph>
+					<Paragraph>
+						I&apos;m a very curious person, that tries to stay up to date with new
+						technologies related to Front-end, backend, in order to build a skillset
+						to solve issues.
+					</Paragraph>
+					<Paragraph>
+						Some of the technologies that i&apos;ve been implementing with are React,
+						Vue, SolidJS, Typescript and NextJS with Prisma, Drizzle ORM, PostgreSQL.
+					</Paragraph>
+					<Paragraph>
+						Fun fact: I&apos;m a big World of Warcraft fan since Burning Crusade
+						expansion. My favourite class was rogue.
+					</Paragraph>
+				</article>
+				<article className="flex flex-row items-center justify-center w-full font-medium opacity-100 gap-7 h-36">
 					<MediaLinks />
 				</article>
 			</section>
@@ -46,11 +50,13 @@ export default function Home() {
 				className="flex flex-col justify-center h-full min-h-screen"
 				id="projects"
 			>
-				<h2 className="mt-24 mb-6 text-3xl font-bold">Projects</h2>
+				<h2 className="pb-2 text-3xl font-semibold tracking-tight transition-colors border-[#1b1b1b] border-b scroll-m-20 first:mt-0 mb-3">
+					Projects
+				</h2>
 				<ProjectList projects={projects} />
 			</section>
 			<footer className="text-center p-8 border-t-2 border-[#1b1b1b] mt-6 text-[#4a4a4a]">
-				<p>© 2023, n0xZ. Powered by Next 13 + RSC 🖤</p>
+				<Paragraph>© 2023, n0xZ. Powered by Next 13 + RSC 🖤</Paragraph>
 			</footer>
 		</>
 	)

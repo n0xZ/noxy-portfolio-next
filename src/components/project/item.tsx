@@ -5,6 +5,7 @@ import { VueIcon } from '../icons/vue'
 import { SvelteIcon } from '../icons/svelte'
 import { SolidjsIcon } from '../icons/solidjs'
 import { PreactIcon } from '../icons/preact'
+import Paragraph from '../ui/paragraph'
 type Props = {
 	item: Project
 }
@@ -15,7 +16,7 @@ export function ProjectItem(props: Props) {
 			target="_blank"
 			rel="noreferrer"
 			key={props.item.link}
-			className="h-44 w-full text-[#dde1e3] rounded-md hover:bg-[#181818]/50 duration-100 ease-in-out flex flex-row justify-around items-center p-1"
+			className=" h-44 w-full text-[#dde1e3] rounded-md hover:bg-[#181818]/80 duration-150 ease-in-out flex flex-row justify-around items-center p-1"
 		>
 			{match(props.item.stack)
 				.when(
@@ -39,11 +40,13 @@ export function ProjectItem(props: Props) {
 					() => <PreactIcon />
 				)
 				.otherwise(() => null)}
-			<div className="flex flex-col items-center justify-center w-8/12 gap-2 text-center">
-				<h3 className="font-bold text-center">{props.item.title}</h3>
-				<p className="text-center opacity-60 text-ellipsis">
+			<div className="flex flex-col items-center justify-center w-8/12 text-center">
+				<h3 className="text-2xl font-semibold tracking-tight text-center scroll-m-20">
+					{props.item.title}
+				</h3>
+				<Paragraph className="text-center opacity-60 ">
 					{props.item.description}
-				</p>
+				</Paragraph>
 			</div>
 		</a>
 	)
