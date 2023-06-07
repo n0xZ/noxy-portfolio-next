@@ -103,4 +103,11 @@ export const getProjects = (): Project[] => [
 		link: 'https://noxy-cronometre.netlify.app/',
 		stack: 'Preact',
 	},
+	{
+		title: 'Noxy  calendar',
+		description:
+			'Web app where you can define your reminders into your calendar.',
+		link: 'https://noxy-calendar.netlify.app/',
+		stack: 'React',
+	},
 ]
