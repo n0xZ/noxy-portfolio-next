@@ -48,7 +48,7 @@ export function MediaLinks() {
 				<TooltipTrigger asChild>
 					<a
 						aria-label="LinkedIn profile"
-						href="https://www.linkedin.com/in/gonzalo-molina-153918217/"
+						href="https://www.linkedin.com/in/g-molina/"
 						target="_blank"
 						rel="noopener"
 						className="w-10 p-0 text-white rounded-full hover:opacity-70"
