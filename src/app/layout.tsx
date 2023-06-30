@@ -39,16 +39,15 @@ export default function RootLayout({
 					content="https://noxy-portfolio-gvpafesfb-n0xz.vercel.app/opengraph-image.png?c6108438d3c72f68"
 				/>
 			</head>
-			<body className=" bg-[#0f0f0f] text-[#fdfdfd]">
-				<header className={`${varta.className} p-8 sticky `}>
-					<nav className="container flex flex-row items-center justify-between max-w-6xl mx-auto">
-						<a href="#" className="text-2xl duration-100 ease-in-out hover:underline">
+			<body className='bg-primary text-primary-foreground'>
+				<header
+					className={`${varta.className} p-5 sticky   top-0 bg-primary/80  backdrop-blur border-b-2 border-secondary/10`}
+				>
+					<nav className="container flex flex-row items-center justify-between max-w-6xl mx-auto text-lg">
+						<a href="#" className="font-bold duration-100 ease-in-out hover:underline">
 							GM
 						</a>
-						<a
-							href="#projects"
-							className="text-2xl duration-100 ease-in-out hover:underline"
-						>
+						<a href="#projects" className="duration-100 ease-in-out hover:underline text-primary-foreground/50">
 							Projects
 						</a>
 					</nav>
