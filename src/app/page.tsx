@@ -13,7 +13,7 @@ export default function Home() {
 	return (
 		<>
 			<section
-				className="flex flex-col self-center justify-center w-full h-full min-h-screen space-y-2 leading-loose "
+				className="flex flex-col justify-center w-full h-full min-h-screen space-y-2 leading-loose "
 				id="#"
 			>
 				<h1
@@ -21,7 +21,7 @@ export default function Home() {
 				>
 					Welcome 👋🏻
 				</h1>
-				<article className="w-full opacity-80">
+				<article className="w-full text-primary-foreground/80">
 					{' '}
 					<Paragraph>
 						I&apos;m Gonzalo. Software developer based in Argentina. I&apos;ve been
@@ -42,7 +42,7 @@ export default function Home() {
 						expansion. My favourite class was rogue.
 					</Paragraph>
 				</article>
-				<article className="flex flex-row items-center justify-center w-full font-medium opacity-100 gap-7 h-36">
+				<article className="flex flex-row items-center justify-center w-full font-medium gap-7 h-36">
 					<MediaLinks />
 				</article>
 			</section>
