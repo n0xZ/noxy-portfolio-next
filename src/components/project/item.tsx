@@ -16,7 +16,7 @@ export function ProjectItem(props: Props) {
 			target="_blank"
 			rel="noreferrer"
 			key={props.item.link}
-			className=" h-44 w-full text-[#dde1e3] rounded-md hover:bg-[#181818]/80 duration-150 ease-in-out flex flex-row justify-around items-center p-1"
+			className="flex flex-row items-center justify-around w-full p-1 duration-150 ease-in-out rounded-md h-44 hover:bg-primary-foreground/5"
 		>
 			{match(props.item.stack)
 				.when(
@@ -44,7 +44,7 @@ export function ProjectItem(props: Props) {
 				<h3 className="text-2xl font-semibold tracking-tight text-center scroll-m-20">
 					{props.item.title}
 				</h3>
-				<Paragraph className="text-center opacity-60 ">
+				<Paragraph className="text-center text-primary-foreground/80 ">
 					{props.item.description}
 				</Paragraph>
 			</div>
