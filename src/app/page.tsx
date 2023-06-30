@@ -50,7 +50,7 @@ export default function Home() {
 				className="flex flex-col justify-center h-full min-h-screen"
 				id="projects"
 			>
-				<h2 className="pb-2 text-3xl font-semibold tracking-tight transition-colors border-[#1b1b1b] border-b scroll-m-20 first:mt-0 mb-3">
+				<h2 className="pb-2 mb-8 text-3xl font-semibold tracking-tight transition-colors border-b border-secondary/20 scroll-m-20 first:mt-0">
 					Projects
 				</h2>
 				<ProjectList projects={projects} />
