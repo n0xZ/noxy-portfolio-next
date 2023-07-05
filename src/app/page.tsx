@@ -21,7 +21,7 @@ export default function Home() {
 				>
 					Welcome 👋🏻
 				</h1>
-				<article className="w-full text-primary-foreground/80">
+				<article className="w-full text-primary/80">
 					{' '}
 					<Paragraph>
 						I&apos;m Gonzalo. Software developer based in Argentina. I&apos;ve been
